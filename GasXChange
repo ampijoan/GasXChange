@@ -1,11 +1,28 @@
-int lightLevel = 0;
 const int photoPin = A0;
+const int tempHumPin = ; //need to assign pin
+const int valvePin = ; //need to assign pin
+
+int lightLevel = 0;
+int preLeafHumidity = 0;
+int postLeafHumidity = 0;
 
 void setup() {
     Serial.begin(9600);
+
+    pinMode(photoPin, INPUT);
+    pinMode(tempHumPin, INPUT);
+    pinMode(valvePin, OUTPUT);
 }
 
 void loop() {
+    digitalWrite(valvePin, LOW); // shut all valves off for MODE 1
+    //read the temperature and humidity from the sensor before the leaf chamber.
+    //Get reading from LICOR
+
+    digitalWrite(valvePin, HIGH); // turn all valves on for MODE 2
     lightLevel = analogRead(photoPin); // 0-4095
+    //read the temperature and humidity from the sensor after the leaf chamber.
+    //Get reading from LICOR
+    
 
 }
