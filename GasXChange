@@ -1,6 +1,7 @@
-const int photoPin = A0;
-const int tempHumPin = ; //need to assign pin
-const int valvePin = ; //need to assign pin
+const int photoPin = A0; //For reading light level with photodiode.
+const int tempHumPin = ; //need to assign pin. For reading temp / humidity.
+const int valvePin = ; //need to assign pin. This is for turning the valves off and on.
+const int lightPin = ; //need to assign pin. This is for setting the light level.
 
 int lightLevel = 0;
 int preLeafHumidity = 0;
@@ -12,6 +13,7 @@ void setup() {
     pinMode(photoPin, INPUT);
     pinMode(tempHumPin, INPUT);
     pinMode(valvePin, OUTPUT);
+    pinMode(lightPin, OUTPUT);
 }
 
 void loop() {
