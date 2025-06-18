@@ -1,9 +1,10 @@
 const int photoPin = A0; //For reading light level with photodiode.
-const int tempHumPin = ; //need to assign pin. For reading temp / humidity.
+const int tempHumPin = ; //need to assign pin. For reading temp & humidity.
 const int valvePin = ; //need to assign pin. This is for turning the valves off and on.
 const int lightPin = ; //need to assign pin. This is for setting the light level.
 
 int lightLevel = 0;
+int lightBrightness = 0;
 int preLeafHumidity = 0;
 int postLeafHumidity = 0;
 
